@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="#fffffa"
+    tools:context="com.mears.mearscalendarapp.MainActivity">
+
+
+    <DatePicker
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:id="@+id/datepicker"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#fffffa"
+        android:calendarViewShown="true"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:datePickerMode="calendar"
+        android:dayOfWeekBackground="#192fd0"
+        android:onClick="setDate"
+        android:scrollIndicators="none"
+        android:spinnersShown="false"
+        android:yearListSelectorColor="#f91515"
+        android:minDate="03/01/2016"
+        style="@android:style/Animation"
+        android:layout_marginRight="35dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose a date above, then a staring hour and ending hour below.  Push here to see selection."
+        android:id="@+id/btnShowIntendedSchedule"
+        android:onClick="setDate"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:background="#0501ff"
+        android:layout_alignBottom="@+id/datepicker"
+        android:layout_alignParentStart="true"
+        android:nestedScrollingEnabled="false"
+        android:foreground="#f50101"
+        android:singleLine="false"
+        android:textColor="#fffefe"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="220dp"
+        android:text="Output Will go Here"
+        android:id="@+id/textView"
+        android:layout_below="@+id/datepicker"
+        android:background="#9373fa"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="86dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="center" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:text="Request Work"
+        android:id="@+id/btnRequestWork"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/timePicker"
+        android:background="#5f01b2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/textView"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:text="Request Day Off"
+        android:id="@+id/btnRequestDayOff"
+        android:layout_above="@+id/btnRequestWork"
+        android:layout_alignParentEnd="true"
+        android:background="#0501ff"
+        android:layout_alignStart="@+id/textView"
+        android:textColor="#ffffff" />
+
+    <TimePicker
+        android:layout_width="86dp"
+        android:layout_height="300dp"
+        android:id="@+id/timePicker"
+        android:numbersBackgroundColor="#f50c0c"
+        android:numbersSelectorColor="#f20303"
+        android:numbersInnerTextColor="#ff0000"
+        android:numbersTextColor="#ff0000"
+        android:nestedScrollingEnabled="true"
+        style="@style/AppTheme"
+        android:amPmBackgroundColor="#f9dc07"
+        android:background="#fffffa"
+        android:layout_below="@+id/datepicker"
+        android:layout_alignStart="@+id/datepicker"
+        android:paddingTop="16dp" />
+
+    <TimePicker
+        style="@style/AppTheme"
+        android:layout_width="86dp"
+        android:layout_height="300dp"
+        android:id="@+id/timePicker3"
+        android:numbersBackgroundColor="#f50c0c"
+        android:numbersSelectorColor="#f20303"
+        android:numbersInnerTextColor="#ff0000"
+        android:numbersTextColor="#ff0000"
+        android:nestedScrollingEnabled="true"
+        android:amPmBackgroundColor="#f9dc07"
+        android:background="#fffffa"
+        android:layout_below="@+id/btnShowIntendedSchedule"
+        android:layout_toEndOf="@+id/timePicker"
+        android:paddingTop="16dp">
+
+    </TimePicker>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/btnShowIntendedSchedule"
+        android:layout_alignStart="@+id/timePicker"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/datepicker"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="73dp"
+        android:layout_height="252dp"
+        android:text=""
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/datepicker"
+        android:layout_alignStart="@+id/datepicker"
+        android:background="#fffffa" />
+
+
+
+
+</RelativeLayout>
