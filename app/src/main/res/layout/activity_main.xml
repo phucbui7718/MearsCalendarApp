@@ -8,12 +8,12 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:background="#fffffa"
-    tools:context="com.mears.mearscalendarapp.MainActivity">
+    tools:context="com.example.smf.saveapp.MainActivity">
 
 
     <DatePicker
         android:layout_width="fill_parent"
-        android:layout_height="300dp"
+        android:layout_height="310dp"
         android:id="@+id/datepicker"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
@@ -34,41 +34,50 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Choose a date above, then a staring hour and ending hour below.  Push here to see selection."
+        android:text="Choose a date above, then a starting hour and ending hour below.  Tap here to see the day and hours you selected."
         android:id="@+id/btnShowIntendedSchedule"
         android:onClick="setDate"
         style="@style/Base.TextAppearance.AppCompat.Body1"
-        android:background="#0501ff"
+        android:background="#7305a2"
         android:layout_alignBottom="@+id/datepicker"
         android:layout_alignParentStart="true"
         android:nestedScrollingEnabled="false"
         android:foreground="#f50101"
         android:singleLine="false"
         android:textColor="#fffefe"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
 
     <TextView
         android:layout_width="190dp"
-        android:layout_height="220dp"
+        android:layout_height="210dp"
         android:text="Output Will go Here"
-        android:id="@+id/textView"
+        android:id="@+id/txtOutputWindow"
         android:layout_below="@+id/datepicker"
-        android:background="#9373fa"
+        android:background="#6238e7"
         android:inputType="textMultiLine"
         android:layout_marginLeft="86dp"
         android:layout_alignParentEnd="true"
-        android:gravity="center" />
+        android:gravity="center"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:textColor="#ffffff"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="30dp" />
 
     <Button
         android:layout_width="140dp"
         android:layout_height="40dp"
         android:text="Request Work"
         android:id="@+id/btnRequestWork"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/txtOutputWindow"
         android:layout_toEndOf="@+id/timePicker"
         android:background="#5f01b2"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/textView"
+        android:layout_alignStart="@+id/txtOutputWindow"
         android:textColor="#ffffff" />
 
     <Button
@@ -79,7 +88,7 @@
         android:layout_above="@+id/btnRequestWork"
         android:layout_alignParentEnd="true"
         android:background="#0501ff"
-        android:layout_alignStart="@+id/textView"
+        android:layout_alignStart="@+id/txtOutputWindow"
         android:textColor="#ffffff" />
 
     <TimePicker
@@ -140,9 +149,8 @@
 
     <Button
         android:layout_width="73dp"
-        android:layout_height="252dp"
-        android:text=""
-        android:id="@+id/button"
+        android:layout_height="248dp"
+        android:id="@+id/btnLeftTop"
         android:layout_alignTop="@+id/datepicker"
         android:layout_alignStart="@+id/datepicker"
         android:background="#fffffa" />
