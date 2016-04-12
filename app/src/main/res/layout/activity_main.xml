@@ -8,7 +8,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:background="#fffffa"
-    tools:context="com.example.smf.saveapp.MainActivity">
+    tools:context="com.mears.mearscalendarapp.MainActivity">
 
 
     <DatePicker
@@ -29,7 +29,9 @@
         android:yearListSelectorColor="#f91515"
         android:minDate="03/01/2016"
         style="@android:style/Animation"
-        android:layout_marginRight="35dp" />
+        android:layout_marginRight="35dp"
+
+        />
 
     <Button
         android:layout_width="fill_parent"

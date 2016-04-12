@@ -1,4 +1,4 @@
-package com.example.smf.saveapp;
+package com.mears.mearscalendarapp;
 
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
